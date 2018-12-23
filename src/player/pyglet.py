@@ -39,6 +39,7 @@ class Pyglet(Player):
         super().seek(elapsed)
         if self.player is not None:
             self.player.seek(elapsed)
+            self.player.play()
 
     def set_volume(self, volume):
         super().set_volume(volume)
