@@ -18,7 +18,7 @@ class Pyglet(Player):
         if self.player is not None:
             self.player.pause()
             self.player.delete()
-        music = pyglet.media.load(track.path.encode('utf8'))
+        music = pyglet.media.load(bytes(track.path.encode('utf8')))
         self.player = music.play()
         self.player.seek(seek)
         self.timer.paused = False
